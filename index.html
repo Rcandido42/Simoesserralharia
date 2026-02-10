@@ -23,57 +23,75 @@
     </div>
 
     <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-40 transition-all duration-300 reveal active">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 border-2 border-black flex items-center justify-center relative">
-                    <div class="absolute top-1 right-1 w-4 h-4 border-t-2 border-r-2 border-black"></div>
-                </div>
-                <div class="flex flex-col leading-none">
-                    <span class="font-bold text-sm tracking-widest">SIMÕES</span>
-                    <span class="text-[0.6rem] text-gray-500 tracking-wider">SERRALHARIA</span>
-                </div>
-            </div>
-
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-                <a href="#inicio" class="text-black hover:text-gold transition">Início</a>
-                <a href="#servicos" class="hover-gold transition">Serviços</a>
-                <a href="#portfolio" class="hover-gold transition">Portfólio</a>
-                <a href="#sobre" class="hover-gold transition">Sobre</a>
-                <a href="#contacto" class="hover-gold transition">Contacto</a>
-            </nav>
-        </div>
-    </header>
-
-    <section id="inicio" class="pt-32 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center relative min-h-screen">
-        <div class="w-full md:w-1/2 z-10">
-            <p class="text-sm tracking-[0.2em] text-gray-500 uppercase mb-4 reveal delay-100">Arte em Metal</p>
-            <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-2 reveal delay-200">
-                SIMÕES
-            </h1>
-            <h2 class="text-5xl md:text-7xl font-light text-gold mb-8 reveal delay-300">
-                SERRALHARIA
-            </h2>
-            <p class="text-gray-500 text-lg max-w-md mb-10 leading-relaxed reveal delay-400">
-                Serralharia especializada em soluções sob medida. Tradição, qualidade e inovação em cada peça que criamos.
-            </p>
-            <div class="flex flex-wrap gap-4 reveal delay-500">
-                <a href="#servicos" class="bg-gray-900 text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-gray-800 transition transform hover:-translate-y-1">
-                    NOSSOS SERVIÇOS
-                </a>
-                <a href="#contacto" class="border border-gray-300 px-8 py-4 text-sm font-bold tracking-wider hover:border-gray-900 transition flex items-center gap-2 group">
-                    <svg class="w-4 h-4 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    CONTACTO
-                </a>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <div class="flex items-center gap-3">
+            <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="h-20 w-auto object-contain">
+            
+            <div class="flex flex-col leading-none">
+                <span class="font-bold text-sm tracking-widest">SIMÕES</span>
+                <span class="text-[0.6rem] text-gray-500 tracking-wider">SERRALHARIA</span>
             </div>
         </div>
+
+        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+            <a href="#inicio" class="text-black hover:text-gold transition">Início</a>
+            <a href="#servicos" class="hover-gold transition">Serviços</a>
+            <a href="#portfolio" class="hover-gold transition">Portfólio</a>
+            <a href="#sobre" class="hover-gold transition">Sobre</a>
+            <a href="#contacto" class="hover-gold transition">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+    <section id="inicio" class="relative min-h-screen pt-32 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 overflow-hidden">
+    
+    <div class="w-full md:w-1/2 z-10">
+        <p class="text-sm tracking-[0.2em] text-gray-500 uppercase mb-4 reveal delay-100">Arte em Metal</p>
+        <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-2 reveal delay-200">
+            SIMÕES
+        </h1>
+        <h2 class="text-5xl md:text-7xl font-light text-gold mb-8 reveal delay-300">
+            SERRALHARIA
+        </h2>
+        <p class="text-gray-500 text-lg max-w-md mb-10 leading-relaxed reveal delay-400">
+            Serralharia especializada em soluções sob medida. Tradição, qualidade e inovação em cada peça que criamos.
+        </p>
+        <div class="flex flex-wrap gap-4 reveal delay-500">
+            <a href="#servicos" class="bg-gray-900 text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-gray-800 transition transform hover:-translate-y-1">
+                NOSSOS SERVIÇOS
+            </a>
+            <a href="#contacto" class="border border-gray-300 px-8 py-4 text-sm font-bold tracking-wider hover:border-gray-900 transition flex items-center gap-2 group">
+                <svg class="w-4 h-4 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                CONTACTO
+            </a>
+        </div>
+    </div>
+
+    <div class="w-full md:w-1/2 flex justify-center items-center relative reveal scale-up delay-300">
+        <div class="absolute w-[120%] h-[120%] bg-gray-100/50 rounded-full -z-10"></div>
+        
+        <div class="relative p-8">
+            <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="w-full max-w-md h-auto object-contain shadow-2xl rounded-lg bg-white">
+            
+            <div class="absolute -top-4 -right-4 w-24 h-24 border-t-[12px] border-r-[12px] border-gray-400"></div>
+        </div>
+    </div>
+
+    <a href="#servicos" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 hover:text-gold transition cursor-pointer">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </a>
+</section>
         
         <div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none reveal scale-up delay-300">
-            <div class="w-[600px] h-[600px] rounded-full bg-gray-200 flex items-center justify-center animate-pulse">
-                <div class="w-64 h-64 border-[20px] border-gray-400 relative">
-                     <div class="absolute -top-10 -right-10 w-32 h-32 border-t-[20px] border-r-[20px] border-gray-400"></div>
-                </div>
-            </div>
+    <div class="w-[600px] h-[600px] rounded-full bg-gray-100 flex items-center justify-center">
+        <div class="relative w-80 h-80 flex items-center justify-center">
+            <img src="assets/ssimoes-logo.jpg" alt="Simões Logo Background" class="w-full h-full object-contain filter grayscale opacity-50">
+            
+            <div class="absolute -top-10 -right-10 w-32 h-32 border-t-[20px] border-r-[20px] border-gray-300"></div>
         </div>
+    </div>
+</div>
         
         <a href="#servicos" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 hover:text-gold transition cursor-pointer">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -163,7 +181,6 @@
                 <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group reveal delay-100">
                     <div class="h-64 overflow-hidden relative">
                         <img src="assets/ssimoes.png" alt="Cobertura" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-800">Serralharia</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">Coberturas e Estruturas</h3>
