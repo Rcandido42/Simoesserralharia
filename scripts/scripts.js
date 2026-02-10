@@ -1,53 +1,96 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+    const header = document.getElementById('main-header');
+    const logoText = document.getElementById('logo-text');
+    const navMenu = document.getElementById('nav-menu');
+    const mobileBtn = document.getElementById('mobile-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    const reveals = document.querySelectorAll('.reveal');
+
+    if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+
+            if (!mobileMenu.classList.contains('hidden')) {
+                header.classList.remove('bg-transparent', 'py-6');
+                header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-3');
+                if(mobileBtn) {
+                     mobileBtn.classList.remove('text-white');
+                     mobileBtn.classList.add('text-gray-800');
+                }
+            } else {
+                if (window.scrollY <= 50) {
+                     updateHeaderOnScroll();
+                }
             }
         });
-    }, observerOptions);
-
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => observer.observe(el));
-
-    const statsSection = document.querySelector('#stats-section');
-    let counted = false;
-
-    const statsObserver = new IntersectionObserver((entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting && !counted) {
-            const counters = document.querySelectorAll('.counter-value');
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                
-                let current = 0;
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.innerText = target;
-                        if(counter.parentElement.innerText.includes('+')) counter.innerText += '+';
-                        if(counter.parentElement.innerText.includes('%')) counter.innerText += '%';
-                    }
-                };
-                updateCounter();
-            });
-            counted = true;
-        }
-    }, { threshold: 0.5 });
-
-    if(statsSection) {
-        statsObserver.observe(statsSection);
     }
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+
+    function updateHeaderOnScroll() {
+        if (!header) return;
+
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) return;
+
+        if (window.scrollY > 50) {
+            header.classList.remove('bg-transparent', 'py-6');
+            header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-3');
+            
+            if(logoText) {
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-gray-800');
+            }
+            if(navMenu) {
+                navMenu.classList.remove('text-white');
+                navMenu.classList.add('text-gray-600');
+            }
+            if(mobileBtn) {
+                mobileBtn.classList.remove('text-white');
+                mobileBtn.classList.add('text-gray-800');
+            }
+
+        } else {
+            header.classList.add('bg-transparent', 'py-6');
+            header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-3');
+            
+            if(logoText) {
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-gray-800');
+            }
+            if(navMenu) {
+                navMenu.classList.add('text-white');
+                navMenu.classList.remove('text-gray-600');
+            }
+            if(mobileBtn) {
+                mobileBtn.classList.add('text-white');
+                mobileBtn.classList.remove('text-gray-800');
+            }
+        }
+    }
+
+    function checkReveal() {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 150;
+
+        reveals.forEach((reveal) => {
+            const elementTop = reveal.getBoundingClientRect().top;
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateHeaderOnScroll);
+    window.addEventListener('scroll', checkReveal);
+
+    updateHeaderOnScroll();
+    checkReveal();
 });

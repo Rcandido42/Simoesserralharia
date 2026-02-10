@@ -4,98 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simões Serralharia - Arte em Metal</title>
+    
+    <link rel="icon" type="image/jpeg" href="assets/ssimoes-logo.jpg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased relative">
 
-    <div class="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-4 pl-4 reveal fade-left delay-500">
-        <a href="#" class="w-10 h-10 border border-gray-300 bg-white flex items-center justify-center hover:border-gold transition text-gray-600 hover:text-gold shadow-sm">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
-        </a>
-        <a href="#" class="w-10 h-10 border border-gray-300 bg-white flex items-center justify-center hover:border-gold transition text-gray-600 hover:text-gold shadow-sm">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="#" class="w-10 h-10 border border-gray-300 bg-white flex items-center justify-center hover:border-gold transition text-gray-600 hover:text-gold shadow-sm">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <div class="w-px h-16 bg-gray-300 mx-auto mt-2"></div>
-    </div>
-
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-40 transition-all duration-300 reveal active">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        
-        <div class="flex items-center gap-3">
-            <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="h-20 w-auto object-contain">
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center relative">
             
-            <div class="flex flex-col leading-none">
-                <span class="font-bold text-sm tracking-widest">SIMÕES</span>
-                <span class="text-[0.6rem] text-gray-500 tracking-wider">SERRALHARIA</span>
+            <div class="flex items-center gap-3">
+                <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="h-16 w-auto object-contain rounded-sm">
+                
+                <div id="logo-text" class="flex flex-col leading-none text-white transition-colors duration-300">
+                    <span class="font-bold text-sm tracking-widest">SIMÕES</span>
+                    <span class="text-[0.6rem] tracking-wider opacity-80">SERRALHARIA</span>
+                </div>
             </div>
+
+            <nav id="nav-menu" class="hidden md:flex space-x-8 text-sm font-medium text-white transition-colors duration-300">
+                <a href="#inicio" class="hover:text-yellow-600 transition">Início</a>
+                <a href="#servicos" class="hover:text-yellow-600 transition">Serviços</a>
+                <a href="#portfolio" class="hover:text-yellow-600 transition">Portfólio</a>
+                <a href="#sobre" class="hover:text-yellow-600 transition">Sobre</a>
+                <a href="#contacto" class="hover:text-yellow-600 transition">Contacto</a>
+            </nav>
+
+            <button id="mobile-btn" class="md:hidden text-white transition-colors duration-300 p-2 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
 
-        <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-            <a href="#inicio" class="text-black hover:text-gold transition">Início</a>
-            <a href="#servicos" class="hover-gold transition">Serviços</a>
-            <a href="#portfolio" class="hover-gold transition">Portfólio</a>
-            <a href="#sobre" class="hover-gold transition">Sobre</a>
-            <a href="#contacto" class="hover-gold transition">Contacto</a>
-        </nav>
-    </div>
-</header>
-
-    <section id="inicio" class="relative min-h-screen pt-32 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 overflow-hidden">
-    
-    <div class="w-full md:w-1/2 z-10">
-        <p class="text-sm tracking-[0.2em] text-gray-500 uppercase mb-4 reveal delay-100">Arte em Metal</p>
-        <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-2 reveal delay-200">
-            SIMÕES
-        </h1>
-        <h2 class="text-5xl md:text-7xl font-light text-gold mb-8 reveal delay-300">
-            SERRALHARIA
-        </h2>
-        <p class="text-gray-500 text-lg max-w-md mb-10 leading-relaxed reveal delay-400">
-            Serralharia especializada em soluções sob medida. Tradição, qualidade e inovação em cada peça que criamos.
-        </p>
-        <div class="flex flex-wrap gap-4 reveal delay-500">
-            <a href="#servicos" class="bg-gray-900 text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-gray-800 transition transform hover:-translate-y-1">
-                NOSSOS SERVIÇOS
-            </a>
-            <a href="#contacto" class="border border-gray-300 px-8 py-4 text-sm font-bold tracking-wider hover:border-gray-900 transition flex items-center gap-2 group">
-                <svg class="w-4 h-4 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                CONTACTO
-            </a>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl py-8 flex flex-col items-center gap-6 transition-all duration-300">
+            <a href="#inicio" class="text-gray-800 text-lg font-medium hover:text-yellow-600 w-full text-center py-2">Início</a>
+            <a href="#servicos" class="text-gray-800 text-lg font-medium hover:text-yellow-600 w-full text-center py-2">Serviços</a>
+            <a href="#portfolio" class="text-gray-800 text-lg font-medium hover:text-yellow-600 w-full text-center py-2">Portfólio</a>
+            <a href="#sobre" class="text-gray-800 text-lg font-medium hover:text-yellow-600 w-full text-center py-2">Sobre</a>
+            <a href="#contacto" class="text-gray-800 text-lg font-medium hover:text-yellow-600 w-full text-center py-2">Contacto</a>
         </div>
-    </div>
+    </header>
 
-    <div class="w-full md:w-1/2 flex justify-center items-center relative reveal scale-up delay-300">
-        <div class="absolute w-[120%] h-[120%] bg-gray-100/50 rounded-full -z-10"></div>
+  <section id="inicio" class="relative min-h-screen flex items-center bg-fixed bg-center bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop');">
         
-        <div class="relative p-8">
-            <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="w-full max-w-md h-auto object-contain shadow-2xl rounded-lg bg-white">
-            
-            <div class="absolute -top-4 -right-4 w-24 h-24 border-t-[12px] border-r-[12px] border-gray-400"></div>
-        </div>
-    </div>
+        <div class="absolute inset-0 bg-black/75 z-0"></div>
 
-    <a href="#servicos" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 hover:text-gold transition cursor-pointer">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-    </a>
-</section>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 flex flex-col md:flex-row items-center gap-12">
         
-        <div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none reveal scale-up delay-300">
-    <div class="w-[600px] h-[600px] rounded-full bg-gray-100 flex items-center justify-center">
-        <div class="relative w-80 h-80 flex items-center justify-center">
-            <img src="assets/ssimoes-logo.jpg" alt="Simões Logo Background" class="w-full h-full object-contain filter grayscale opacity-50">
-            
-            <div class="absolute -top-10 -right-10 w-32 h-32 border-t-[20px] border-r-[20px] border-gray-300"></div>
+            <div class="w-full md:w-1/2">
+                <p class="text-sm tracking-[0.2em] text-gray-300 uppercase mb-4 reveal delay-100 border-l-4 border-yellow-600 pl-4">Arte em Metal</p>
+                <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-2 text-white reveal delay-200">
+                    SIMÕES
+                </h1>
+                <h2 class="text-5xl md:text-7xl font-light text-yellow-600 mb-8 reveal delay-300">
+                    SERRALHARIA
+                </h2>
+                <p class="text-gray-300 text-lg max-w-md mb-10 leading-relaxed reveal delay-400">
+                    Serralharia especializada em soluções sob medida. Tradição, qualidade e inovação em cada peça que criamos.
+                </p>
+                <div class="flex flex-wrap gap-4 reveal delay-500">
+                    <a href="#servicos" class="bg-yellow-600 text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-white hover:text-gray-900 transition duration-300 transform hover:-translate-y-1 shadow-lg shadow-yellow-600/20">
+                        NOSSOS SERVIÇOS
+                    </a>
+                    <a href="#contacto" class="border border-white text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-white hover:text-gray-900 transition duration-300 flex items-center gap-2 group">
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        CONTACTO
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 hidden md:flex justify-center items-center reveal scale-up delay-300">
+                <div class="relative p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                    <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="w-full max-w-md h-auto object-contain shadow-2xl rounded-lg bg-white relative z-10">
+                    
+                    <div class="absolute -top-4 -right-4 w-32 h-32 border-t-[4px] border-r-[4px] border-yellow-600 z-0"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 border-b-[4px] border-l-[4px] border-yellow-600 z-0"></div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</div>
         
-        <a href="#servicos" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 hover:text-gold transition cursor-pointer">
+        <a href="#servicos" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50 hover:text-yellow-600 transition cursor-pointer z-20">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </a>
+
     </section>
 
     <section id="servicos" class="py-24 bg-white">
@@ -103,7 +99,7 @@
             <div class="text-center mb-16 reveal">
                 <p class="text-xs font-bold tracking-[0.2em] text-gray-500 uppercase mb-2">O Que Fazemos</p>
                 <h2 class="text-4xl font-medium tracking-tight mb-4">NOSSOS SERVIÇOS</h2>
-                <div class="inline-flex items-center gap-2 text-gold font-semibold bg-orange-50 px-4 py-1 rounded-full">
+                <div class="inline-flex items-center gap-2 text-yellow-600 font-semibold bg-orange-50 px-4 py-1 rounded-full">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     Aveiro, PT
                 </div>
@@ -113,7 +109,7 @@
                 
                 <div class="p-8 border border-gray-100 shadow-sm card-hover group reveal delay-100 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-gray-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500">Serralharia</div>
-                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-gold transition">
+                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-yellow-600 transition">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M3 15l9-9 9 9M3 15h18"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Coberturas</h3>
@@ -122,7 +118,7 @@
 
                 <div class="p-8 border border-gray-100 shadow-sm card-hover group reveal delay-200 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-gray-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500">Serralharia</div>
-                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-gold transition">
+                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-yellow-600 transition">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M4 12 12 4l8 8"/><path d="M8 22V12"/><path d="M16 22V12"/><path d="M4 17h16"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Gradeamentos</h3>
@@ -131,7 +127,7 @@
 
                 <div class="p-8 border border-gray-100 shadow-sm card-hover group reveal delay-300 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-gray-100 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500">Serralharia</div>
-                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-gold transition">
+                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-yellow-600 transition">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 17h16M4 7v10c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V7M8 7v12M16 7v12M12 7v12"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Portões</h3>
@@ -139,8 +135,8 @@
                 </div>
 
                 <div class="p-8 border border-gray-100 shadow-sm card-hover group reveal delay-100 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold">Giratória</div>
-                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-gold transition">
+                    <div class="absolute top-0 right-0 bg-yellow-600/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-yellow-600">Giratória</div>
+                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-yellow-600 transition">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 16h20M2 20h20M12 2v6M12 8a2 2 0 100-4 2 2 0 000 4z"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Piscinas</h3>
@@ -148,8 +144,8 @@
                 </div>
 
                 <div class="p-8 border border-gray-100 shadow-sm card-hover group reveal delay-200 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold">Giratória</div>
-                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-gold transition">
+                    <div class="absolute top-0 right-0 bg-yellow-600/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-yellow-600">Giratória</div>
+                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-yellow-600 transition">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2zM4 15l2-3 2-3 4 4 4 3 2 4M10 9l-2 3M17 16l-2-2"/></svg>
                     </div>
                     <h3 class="text-xl font-medium mb-3">Valas e Saneamento</h3>
@@ -157,12 +153,12 @@
                 </div>
 
                 <div class="p-8 border border-gray-100 shadow-sm card-hover group reveal delay-300 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold">Giratória</div>
-                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-gold transition">
+                    <div class="absolute top-0 right-0 bg-yellow-600/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-yellow-600">Giratória</div>
+                    <div class="w-12 h-12 mb-6 text-gray-800 group-hover:text-yellow-600 transition">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h18M2 12h16M2 7h13a3 3 0 0 1 3 3v7M21 17v-3a2 2 0 0 0-2-2h-2M17 5l-1-2h-4L11 5"/></svg>
                     </div>
-                    <h3 class="text-xl font-medium mb-3">Limpezas e Outros</h3>
-                    <p class="text-gray-500 text-sm">Limpeza de terrenos, terraplanagens, remoção de terras e outros serviços de giratória.</p>
+                    <h3 class="text-xl font-medium mb-3">Outros Serviços</h3>
+                    <p class="text-gray-500 text-sm">Diversos trabalhos de giratória e movimentação de terras sob consulta.</p>
                 </div>
 
             </div>
@@ -183,7 +179,7 @@
                         <img src="assets/ssimoes.png" alt="Cobertura" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">Coberturas e Estruturas</h3>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-yellow-600 transition">Coberturas e Estruturas</h3>
                         <p class="text-gray-500 text-sm">Estrutura metálica para armazém industrial.</p>
                     </div>
                 </div>
@@ -193,8 +189,8 @@
                         <img src="assets/ssimoes3.png" alt="Piscina" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">instalação de portões</h3>
-                        <p class="text-gray-500 text-sm">ou fabrico e instalação de portões</p>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-yellow-600 transition">Instalação de Portões</h3>
+                        <p class="text-gray-500 text-sm">Fabrico e instalação de portões</p>
                     </div>
                 </div>
 
@@ -203,7 +199,7 @@
                         <img src="assets/ssimoes2.png" alt="Gradeamento" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">Gradeamentos</h3>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-yellow-600 transition">Gradeamentos</h3>
                         <p class="text-gray-500 text-sm">Vedação moderna em ferro lacado.</p>
                     </div>
                 </div>
@@ -213,8 +209,8 @@
                         <img src="assets/ssimoes4.png" alt="Valas" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">Chaminés</h3>
-                        <p class="text-gray-500 text-sm">substituições de chaminés antigas ou danificadas de fabrico próprio</p>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-yellow-600 transition">Chaminés</h3>
+                        <p class="text-gray-500 text-sm">Substituições de chaminés antigas ou danificadas</p>
                     </div>
                 </div>
 
@@ -223,8 +219,8 @@
                         <img src="assets/ssimoes6.png" alt="Portão" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">Reparações</h3>
-                        <p class="text-gray-500 text-sm">Reparação de um portão</p>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-yellow-600 transition">Reparações</h3>
+                        <p class="text-gray-500 text-sm">Reparação de portões e estruturas</p>
                     </div>
                 </div>
 
@@ -233,8 +229,8 @@
                         <img src="assets/ssimoes5.png" alt="Limpeza" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold mb-1 group-hover:text-gold transition">Decoração de interiores</h3>
-                        <p class="text-gray-500 text-sm">escadas em ferro e degraus de madeira</p>
+                        <h3 class="text-lg font-bold mb-1 group-hover:text-yellow-600 transition">Decoração de interiores</h3>
+                        <p class="text-gray-500 text-sm">Escadas em ferro e degraus de madeira</p>
                     </div>
                 </div>
 
@@ -248,7 +244,7 @@
         </div>
     </section>
 
-   <section id="sobre" class="py-24 bg-white">
+    <section id="sobre" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             
             <div class="reveal fade-left">
@@ -260,7 +256,7 @@
                 <p class="text-gray-500 leading-relaxed mb-8">
                     Não precisa de contratar duas empresas diferentes. Nós preparamos o terreno com a nossa giratória e instalamos a estrutura metálica. Eficiência, rapidez e um único responsável pelo seu projeto.
                 </p>
-                <a href="#contacto" class="text-gold font-bold tracking-wider text-sm border-b-2 border-gold pb-1 hover:text-gray-900 hover:border-gray-900 transition">
+                <a href="#contacto" class="text-yellow-600 font-bold tracking-wider text-sm border-b-2 border-yellow-600 pb-1 hover:text-gray-900 hover:border-gray-900 transition">
                     PEDIR ORÇAMENTO GRÁTIS
                 </a>
             </div>
@@ -268,7 +264,7 @@
             <div class="grid gap-6 reveal delay-200">
                 
                 <div class="flex items-start gap-4 p-6 border border-gray-100 shadow-sm hover:shadow-md transition bg-gray-50">
-                    <div class="text-gold bg-white p-3 rounded-full shadow-sm">
+                    <div class="text-yellow-600 bg-white p-3 rounded-full shadow-sm">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div>
@@ -278,7 +274,7 @@
                 </div>
 
                 <div class="flex items-start gap-4 p-6 border border-gray-100 shadow-sm hover:shadow-md transition bg-gray-50">
-                    <div class="text-gold bg-white p-3 rounded-full shadow-sm">
+                    <div class="text-yellow-600 bg-white p-3 rounded-full shadow-sm">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div>
@@ -288,7 +284,7 @@
                 </div>
 
                 <div class="flex items-start gap-4 p-6 border border-gray-100 shadow-sm hover:shadow-md transition bg-gray-50">
-                    <div class="text-gold bg-white p-3 rounded-full shadow-sm">
+                    <div class="text-yellow-600 bg-white p-3 rounded-full shadow-sm">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
                     <div>
@@ -313,7 +309,7 @@
                     <div class="space-y-8">
                         <div>
                             <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Telefone</p>
-                            <p class="text-lg font-medium text-gray-900">perguntar</p>
+                            <p class="text-lg font-medium text-gray-900">+351 915 806 154</p>
                         </div>
                         <div>
                             <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Email</p>
@@ -330,7 +326,7 @@
                     </div>
 
                     <div class="flex gap-4 mt-8">
-                        <a href="#" class="bg-gray-900 text-white px-8 py-3 text-sm font-bold tracking-wider hover:bg-gray-800 transition flex-1 text-center">
+                        <a href="tel:+351915806154" class="bg-gray-900 text-white px-8 py-3 text-sm font-bold tracking-wider hover:bg-gray-800 transition flex-1 text-center">
                             LIGAR AGORA →
                         </a>
                         <a href="#" class="border border-gray-300 bg-white text-gray-900 px-8 py-3 text-sm font-bold tracking-wider hover:bg-gray-50 transition flex-1 text-center">
@@ -346,16 +342,17 @@
         </div>
     </section>
 
-  <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-gold">
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-yellow-600">
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 
                 <div class="space-y-4">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 border-2 border-white flex items-center justify-center relative">
-                            <div class="absolute top-1 right-1 w-3 h-3 border-t-2 border-r-2 border-white"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-white p-1 rounded h-12 w-auto flex items-center justify-center">
+                            <img src="assets/ssimoes-logo.jpg" alt="Simões Serralharia" class="h-full w-auto object-contain">
                         </div>
+                        
                         <div class="flex flex-col leading-none">
                             <span class="font-bold text-lg tracking-widest">SIMÕES</span>
                             <span class="text-[0.6rem] text-gray-400 tracking-wider">SERRALHARIA</span>
@@ -366,42 +363,42 @@
                         A sua parceira de confiança em Aveiro para obras que duram uma vida.
                     </p>
                     <div class="flex gap-4 pt-2">
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold hover:text-white transition duration-300">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-yellow-600 hover:text-white transition duration-300">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold hover:text-white transition duration-300">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-yellow-600 hover:text-white transition duration-300">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gold hover:text-white transition duration-300">
+                        <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-yellow-600 hover:text-white transition duration-300">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-gold mb-6">Navegação</h3>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-yellow-600 mb-6">Navegação</h3>
                     <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="#inicio" class="hover:text-white transition flex items-center gap-2"><span class="text-gold">›</span> Início</a></li>
-                        <li><a href="#servicos" class="hover:text-white transition flex items-center gap-2"><span class="text-gold">›</span> Serviços</a></li>
-                        <li><a href="#processo" class="hover:text-white transition flex items-center gap-2"><span class="text-gold">›</span> Como Trabalhamos</a></li>
-                        <li><a href="#sobre" class="hover:text-white transition flex items-center gap-2"><span class="text-gold">›</span> Sobre Nós</a></li>
-                        <li><a href="#contacto" class="hover:text-white transition flex items-center gap-2"><span class="text-gold">›</span> Contactos</a></li>
+                        <li><a href="#inicio" class="hover:text-white transition flex items-center gap-2"><span class="text-yellow-600">›</span> Início</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition flex items-center gap-2"><span class="text-yellow-600">›</span> Serviços</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition flex items-center gap-2"><span class="text-yellow-600">›</span> Portfólio</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition flex items-center gap-2"><span class="text-yellow-600">›</span> Sobre Nós</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition flex items-center gap-2"><span class="text-yellow-600">›</span> Contactos</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-gold mb-6">Fale Connosco</h3>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-yellow-600 mb-6">Fale Connosco</h3>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-gold mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span>perguntar<br>3800 Aveiro, Portugal</span>
+                            <svg class="w-5 h-5 text-yellow-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>+351 915 806 154<br>3800 Aveiro, Portugal</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             <span class="hover:text-white transition cursor-pointer">perguntar</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <span class="hover:text-white transition cursor-pointer">perguntar</span>
                         </li>
                     </ul>
@@ -410,7 +407,7 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2025 Simões Serralharia. Todos os direitos reservados.</p>
+                <p>© 2025 Simões Serralharia. Todos os direitos reservados.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-white transition">Política de Privacidade</a>
                     <a href="#" class="hover:text-white transition">Termos e Condições</a>
