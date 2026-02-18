@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    
     const header = document.getElementById('main-header');
     const logoText = document.getElementById('logo-text');
     const navMenu = document.getElementById('nav-menu');
@@ -7,11 +7,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('#mobile-menu a');
     const reveals = document.querySelectorAll('.reveal');
+    const carouselImages = document.querySelectorAll('.hover-carousel');
+
+    carouselImages.forEach(img => {
+        let interval;
+        const originalSrc = img.src;
+        const images = img.dataset.images ? JSON.parse(img.dataset.images) : [originalSrc];
+        let currentIndex = 0;
+
+        img.closest('.group').addEventListener('mouseenter', () => {
+            interval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                img.style.opacity = 0;
+                
+                setTimeout(() => {
+                    img.src = images[currentIndex];
+                    img.style.opacity = 1;
+                }, 200);
+                
+            }, 1500); 
+        });
+
+        img.closest('.group').addEventListener('mouseleave', () => {
+            clearInterval(interval);
+            img.style.opacity = 0;
+            setTimeout(() => {
+                img.src = originalSrc;
+                img.style.opacity = 1;
+                currentIndex = 0;
+            }, 200);
+        });
+    });
 
     if (mobileBtn && mobileMenu) {
         mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-
+            
             if (!mobileMenu.classList.contains('hidden')) {
                 header.classList.remove('bg-transparent', 'py-6');
                 header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-3');
@@ -90,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateHeaderOnScroll);
     window.addEventListener('scroll', checkReveal);
-
+    
     updateHeaderOnScroll();
     checkReveal();
 });

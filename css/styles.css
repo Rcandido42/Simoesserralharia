@@ -15,6 +15,15 @@ body {
 .border-gold { border-color: var(--gold); }
 .hover-gold:hover { color: var(--gold); }
 
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
