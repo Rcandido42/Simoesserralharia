@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /*Ver se funciona dps*/
     function checkReveal() {
         const windowHeight = window.innerHeight;
         const elementVisible = 150;
