@@ -14,28 +14,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalSrc = img.src;
         const images = img.dataset.images ? JSON.parse(img.dataset.images) : [originalSrc];
         let currentIndex = 0;
+        const container = img.parentElement;
+
+        images.forEach(src => new Image().src = src);
 
         img.closest('.group').addEventListener('mouseenter', () => {
             interval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % images.length;
+                
+                container.style.backgroundImage = `url('${img.src}')`;
+                container.style.backgroundSize = 'cover';
+                container.style.backgroundPosition = 'center';
+                
+                img.style.transition = 'opacity 0.5s ease-in-out';
                 img.style.opacity = 0;
                 
                 setTimeout(() => {
                     img.src = images[currentIndex];
-                    img.style.opacity = 1;
-                }, 200);
+                    img.onload = () => {
+                        img.style.opacity = 1;
+                    };
+                }, 500);
                 
-            }, 1500); 
+            }, 2000); 
         });
 
         img.closest('.group').addEventListener('mouseleave', () => {
             clearInterval(interval);
+            
+            container.style.backgroundImage = `url('${img.src}')`;
             img.style.opacity = 0;
+            
             setTimeout(() => {
                 img.src = originalSrc;
-                img.style.opacity = 1;
+                img.onload = () => {
+                    img.style.opacity = 1;
+                };
                 currentIndex = 0;
-            }, 200);
+            }, 500);
         });
     });
 
@@ -107,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /*Ver se funciona dps*/
     function checkReveal() {
         const windowHeight = window.innerHeight;
         const elementVisible = 150;
